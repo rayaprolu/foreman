@@ -70,7 +70,6 @@ class DashboardController < ApplicationController
   end
 
   def prefetch_data
-
     @total_hosts = Host.count
     # hosts with errors in the last puppet run
     @bad_hosts = Host.recent.with_error.count
